@@ -137,14 +137,19 @@ button {
 /* ========== gamerAre Section styles ========== */
 
 .gamerAreMain {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
+   */
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 55px;
 }
 
 .gamerAreMainLeft img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .gamerAreMainRight {
@@ -162,11 +167,11 @@ button {
 
 .gamerAreMainRight P {
   color: #534c64;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 30px;
-  width: 520px;
-  margin: 25px 0;
+  /* max-width: 520px; */
+  margin: 25px 0px;
 }
 
 .gamerAreMainRight .btn3 {
@@ -223,5 +228,23 @@ button {
   }
   .playGoatMainRight img {
     width: 100%;
+  }
+
+  /* ######## gamerAre Section styles responsive for mobile device ######## */
+
+  .gamerAreMain {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gamerAreMainRight {
+    text-align: center;
+  }
+
+  .gamerAreMainRight h3 {
+    margin: 25px 0px 10px 0px;
+  }
+
+  .gamerAreMainRight h2 {
+    font-size: 1.6rem;
   }
 }
