@@ -1,7 +1,9 @@
 /* ======= work sans - Google fonts import ======= */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-* {
+*,
+*:after,
+*:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,6 +17,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 button {
   cursor: pointer;
 }
@@ -22,9 +30,16 @@ button {
 .container {
   max-width: 1288px;
   margin: 0 auto;
+  padding: 0px 20px;
 }
 
 /* ===== header styles ===== */
+
+header {
+  padding: 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
 
 .navMain {
   width: 100%;
@@ -38,15 +53,12 @@ button {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  width: 50%;
-  padding: 20px 0;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  width: 250px;
 }
 
 .logoTitle {
   color: #0b0223;
-  font-size: 45px;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 
@@ -68,19 +80,43 @@ button {
 
 .items li a {
   color: #3c354f;
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
-.items li input {
+.navMain form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   border-radius: 8px;
   background: rgba(11, 2, 35, 0.1);
-  padding: 12px 24px;
+}
+
+.navMain form input {
   border: none;
   outline: none;
+  padding: 12px 24px;
+  background: transparent;
+}
+
+.navMain form .fa-youtube {
+  color: red;
+  font-size: 1.5rem;
+}
+
+.navMain form .fa-tiktok {
+  color: #3c354f;
+  font-size: 1.5rem;
 }
 
 /* ========== playGoat Section styles ========== */
+
+.playGoatMainLeft {
+  width: 50%;
+  background-image: url("images/Group14.png");
+  background-repeat: no-repeat;
+  background-position: cover;
+}
 
 .playGoatMain {
   display: flex;
@@ -96,7 +132,6 @@ button {
 }
 .playGoatMainLeft h1 {
   font-size: 5.93rem;
-
   font-weight: 800;
   background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
   background-clip: text;
@@ -134,14 +169,13 @@ button {
   margin-left: 22px;
 }
 
+.playGoatMainRight {
+  flex: 1;
+}
+
 /* ========== gamerAre Section styles ========== */
 
 .gamerAreMain {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center;
-   */
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 55px;
@@ -157,7 +191,7 @@ button {
 }
 
 .gamerAreMainRight h1 {
-  font-size: 48px;
+  font-size: 2.8rem;
   font-weight: 700;
   background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
   background-clip: text;
@@ -170,7 +204,6 @@ button {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 30px;
-  /* max-width: 520px; */
   margin: 25px 0px;
 }
 
@@ -181,33 +214,103 @@ button {
   border: none;
   outline: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.4rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 .gamerAreMainRight h3 {
   color: #534c64;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   margin: 25px 0px;
 }
 
 .gamerAreMainRight h2 {
   color: #534c64;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
-/* ============ Responsive styles for mobile devices ============ */
+/* ========== onlineGameMain Section styles ========== */
 
-@media screen and (max-width: 576px) {
+.onlineGameMain {
+  margin-top: 150px;
+}
+
+.onlineGameMain h1 {
+  color: #0b0223;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.onlineGameMain h1 span {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.onlineGameMain > p {
+  color: #534c64;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  margin: 30px 0px;
+}
+
+.onlineGameMain .boxMain {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+.boxItem a {
+  display: inline-block;
+}
+
+.boxItem a img {
+  border-radius: 15px;
+}
+
+.boxItem a img:hover {
+  border: 5px solid #ff42a5;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.boxItem p {
+  color: #534c64;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* ============ Responsive styles for Tablet devices ============ */
+
+@media screen and (max-width: 890px) {
+  .playGoatMainLeft h1 {
+    font-size: 3.93rem;
+  }
+
+  .playGoatMainLeft p {
+    font-size: 2.5rem;
+  }
+}
+
+/* ============ Responsive styles for Tablet devices ============ */
+
+@media screen and (max-width: 768px) {
   .navMain {
     flex-direction: column;
     padding: 0;
     margin: 0;
   }
   .logo {
-    width: 100%;
+    width: 100px;
     justify-content: center;
     align-items: center;
     padding: 10px 0px;
@@ -217,8 +320,36 @@ button {
     flex-direction: column;
   }
 
-  /* ######## playGoat Section styles responsive for mobile device ######## */
+  .playGoatMain {
+    flex-direction: column-reverse;
+  }
 
+  .playGoatMainLeft {
+    margin-top: 55px;
+    text-align: center;
+  }
+
+  .gamerAreMain {
+    grid-template-columns: 1fr;
+  }
+
+  .gamerAreMainRight {
+    text-align: center;
+  }
+
+  .onlineGameMain .boxMain {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .boxItem p {
+    font-size: 0.8rem;
+  }
+}
+
+/* ============ Responsive styles for mobile devices ============ */
+
+@media screen and (max-width: 576px) {
   .playGoatMain {
     flex-direction: column-reverse;
   }
@@ -229,9 +360,6 @@ button {
   .playGoatMainRight img {
     width: 100%;
   }
-
-  /* ######## gamerAre Section styles responsive for mobile device ######## */
-
   .gamerAreMain {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -246,5 +374,21 @@ button {
 
   .gamerAreMainRight h2 {
     font-size: 1.6rem;
+  }
+
+  .onlineGameMain .boxMain {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .boxMain .boxItem p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .boxMain .boxItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
