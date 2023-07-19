@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   max-width: 1288px;
   margin: 0 auto;
@@ -76,6 +80,121 @@ a {
   outline: none;
 }
 
+/* ========== playGoat Section styles ========== */
+
+.playGoatMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playGoatMainLeft p {
+  color: #0b0223;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.playGoatMainLeft h1 {
+  font-size: 5.93rem;
+
+  font-weight: 800;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 22px;
+}
+
+.playGoatMainLeft ul li {
+  color: #534c64;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  list-style: none;
+  line-height: 2rem;
+}
+
+.playGoatMainLeft .btn1 {
+  padding: 21px 40px;
+  border-radius: 48px;
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.playGoatMainLeft .btn2 {
+  padding: 21px 40px;
+  border-radius: 48px;
+  background: #4ec5f7;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin-top: 32px;
+  margin-left: 22px;
+}
+
+/* ========== gamerAre Section styles ========== */
+
+.gamerAreMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.gamerAreMainLeft img {
+  width: 100%;
+}
+
+.gamerAreMainRight {
+  text-align: right;
+}
+
+.gamerAreMainRight h1 {
+  font-size: 48px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gamerAreMainRight P {
+  color: #534c64;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 520px;
+  margin: 25px 0;
+}
+
+.gamerAreMainRight .btn3 {
+  padding: 21px 40px;
+  border-radius: 48px;
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.gamerAreMainRight h3 {
+  color: #534c64;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 25px 0px;
+}
+
+.gamerAreMainRight h2 {
+  color: #534c64;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* ============ Responsive styles for mobile devices ============ */
+
 @media screen and (max-width: 576px) {
   .navMain {
     flex-direction: column;
@@ -91,5 +210,18 @@ a {
   .items {
     margin-top: 35px;
     flex-direction: column;
+  }
+
+  /* ######## playGoat Section styles responsive for mobile device ######## */
+
+  .playGoatMain {
+    flex-direction: column-reverse;
+  }
+
+  .playGoatMainRight {
+    margin: 30px 0px 85px 0px;
+  }
+  .playGoatMainRight img {
+    width: 100%;
   }
 }
