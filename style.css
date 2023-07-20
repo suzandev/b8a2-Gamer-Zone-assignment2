@@ -289,7 +289,147 @@ header {
   text-align: left;
 }
 
+/* ========== onlineGameMain Section styles ========== */
+
+.playInstantly {
+  margin-top: 100px;
+}
+
+.playInstantlyMain {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+.playInstantlyLeft {
+  text-align: right;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.playInstantlyLeftMain {
+  max-width: 300px;
+}
+
+.playInstantlyLeft h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.playInstantlyLeft h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0b0223;
+}
+
+.playInstantlyLeft p {
+  color: #534c64;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  margin-top: 24px;
+}
+
+.playInstantlyRight {
+  width: 45%;
+}
+
+.playInstantlyRightMain {
+  position: relative;
+}
+
+.playInstantlyRightMain .angel {
+  width: 50%;
+  /* height: 365.083px; */
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-50%, 20%);
+}
+
+/* ========== onlineGame Section styles ========== */
+
+.wrapper {
+  padding: 150px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;
+  padding: 0 16px;
+}
+
+.images {
+  width: 45%;
+}
+
+.imgWrapper {
+  position: relative;
+}
+
+.img2 {
+  width: 50%;
+  height: 70%;
+  object-fit: contain;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(40%, 30%);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_wrapper {
+  max-width: 400px;
+}
+
+.content_wrapper .title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 60px; /* 125% */
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content_wrapper h1 {
+  color: #0b0223;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.content_wrapper p {
+  margin-top: 30px;
+  color: #534c64;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 22px; /* 166.667% */
+}
+
 /* ============ Responsive styles for Tablet devices ============ */
+
+@media screen and (max-width: 1096px) {
+  .playInstantlyLeft {
+    justify-content: start;
+  }
+}
 
 @media screen and (max-width: 890px) {
   .playGoatMainLeft h1 {
@@ -300,8 +440,6 @@ header {
     font-size: 2.5rem;
   }
 }
-
-/* ============ Responsive styles for Tablet devices ============ */
 
 @media screen and (max-width: 768px) {
   .navMain {
@@ -345,6 +483,32 @@ header {
   .boxItem p {
     font-size: 0.8rem;
   }
+
+  .playInstantlyMain {
+    flex-direction: column;
+  }
+  .playInstantlyLeft {
+    text-align: center;
+  }
+  .playInstantlyLeftMain h3,
+  .playInstantlyLeftMain h1,
+  .content_wrapper .title,
+  .content_wrapper h1 {
+    font-size: 1.8rem;
+  }
+
+  .content_wrapper .title {
+    line-height: normal;
+  }
+
+  .content_wrapper {
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
 }
 
 /* ============ Responsive styles for mobile devices ============ */
@@ -352,6 +516,14 @@ header {
 @media screen and (max-width: 576px) {
   .playGoatMain {
     flex-direction: column-reverse;
+  }
+
+  .playGoatMainLeft p {
+    font-size: 1.6rem;
+  }
+
+  .playGoatMainLeft h1 {
+    font-size: 2.5rem;
   }
 
   .playGoatMainRight {
@@ -390,5 +562,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .images {
+    width: 80%;
   }
 }
