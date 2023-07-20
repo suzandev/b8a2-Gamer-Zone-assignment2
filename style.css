@@ -27,6 +27,10 @@ button {
   cursor: pointer;
 }
 
+ul li {
+  list-style: none;
+}
+
 .container {
   max-width: 1288px;
   margin: 0 auto;
@@ -72,6 +76,8 @@ header {
   align-items: center;
   gap: 32px;
   padding: 20px 0;
+  margin-left: auto;
+  margin-right: 20px;
 }
 
 .items li {
@@ -107,6 +113,7 @@ header {
 .navMain form .fa-tiktok {
   color: #3c354f;
   font-size: 1.5rem;
+  margin-right: 10px;
 }
 
 /* ========== playGoat Section styles ========== */
@@ -499,6 +506,133 @@ header {
   bottom: 0;
 }
 
+/* ========== Careers Section styles ========== */
+
+.partners .wrapper {
+  max-width: 1245px;
+  margin: 0 auto;
+}
+
+.partners_main {
+  /* display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+  place-content: center; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.partners_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 2px solid transparent;
+}
+
+.partners_item img {
+  width: 50px;
+  height: 50px;
+}
+
+.partners_item h3 {
+  color: #0b0223;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.partners_item:hover {
+  border: 2px solid #f948b2;
+  /* padding: 5px 12px; */
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.partners_item:hover h3 {
+  color: #f948b2;
+}
+
+/* ========== Footer Section styles ========== */
+
+.footer {
+  width: 100%;
+
+  background: #0b0223;
+}
+
+.footer_main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 150px 0;
+}
+
+.footer_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.footer_logo img {
+  width: 86.041px;
+  height: 40px;
+}
+
+.footerTitle {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.footerTitle span {
+  background: linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer_title ul,
+.footer_icons ul,
+.footer_description ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer_title ul li a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer_icons ul li a i {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.footer_description ul li a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer_copy {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+}
+
 /* ============ Responsive styles for Tablet devices ============ */
 
 @media screen and (max-width: 1096px) {
@@ -628,6 +762,11 @@ header {
   .careers_contentImg img {
     display: block;
   }
+
+  .partners_main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ============ Responsive styles for mobile devices ============ */
@@ -689,5 +828,10 @@ header {
 
   .accordion {
     flex-direction: column;
+  }
+
+  .partners_main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
